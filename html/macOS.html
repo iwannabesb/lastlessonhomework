@@ -10,9 +10,28 @@
         a {
         background-color: transparent
         }
+        .container {
+         width: 1500px;
+         height: 400px;
+         background-image: linear-gradient(to right, #E2BCBB, #E4514A);
+         }
+         .col-1-2 {
+         width: 50%;
+         }
     </style>
 </head>
 <body>
+  <div class="container">
+    <a class="logo">Обучающий портал компании</a>
+    <nav>
+      <ul>
+          <li><a href="index.html"><img src="../jpg/logo.jpg" width="50" height="50" border="0">Главная</a></li>
+          <li><a href="cmd.html"><img src="../jpg/win.jpg" width="50" height="50" border="0">Командная строка Win</a></li>
+          <li><a href="macOS.html"><img src="../jpg/mac.jpg" width="50" height="50" border="0">Терминал Mac</a></li>
+          <li><a href="git.html"><img src="../jpg/git.jpg" width="50" height="50" border="0">Команды Git</a></li>
+      </ul>
+    </nav>
+  </div>
 <h2>Команды для навигации и базовой работы с файлами</h2>
 <ul>
     <li><strong>ls</strong> — покажет содержимое директории, в которой вы находитесь. Если после команды ввести адрес
@@ -25,7 +44,7 @@
         директорию или <strong>cd (без аргументов)</strong> для прыжка в домашнюю папку.
     </li>
     <li><strong>pwds</strong> — укажет полный путь до директории, в которой вы находитесь. Если вы перепрыгнули на
-        рабочий стол с помощью cd, то pwd покажет что-то в духе /home/Polzovatel/Desktop.
+        рабочий стол с помощью <strong>cd</strong>, то <strong>pwd</strong> покажет что-то в духе <strong>/home/Polzovatel/Desktop</strong>.
     </li>
     <li><strong>file</strong> — расскажет, что перед вами изображение, директория или текстовый документ, а также
         предоставит информацию о них (для изображений, например, это данные EXIF).
@@ -35,21 +54,19 @@
             записи</em>/Desktop</strong>. Эту же команду используют, чтобы поменять имя файла. Для этого надо не
         указывать папку для перемещения, а просто ввести новое название для документа:
     </li>
-</ul>
-<ul>
     <li><strong>rm</strong> — опасная команда для удаления директорий и их содержимого. Затирает все данные, которые
         обнаружит в указанной папке. То есть все субдиректории и файлы будут уничтожены. И восстановить их не получится.
         Про корзину этой команде ничего неизвестно. Синтаксис такой <strong>rm <em>путь до директории, которую нужно
             стереть с компьютера</em></strong>. Чтобы удалить каталог&nbsp;Timeweb и все его содержимое из домашней
         папки пользователя, введем: <strong>rm ~/Timeweb</strong>.
     </li>
-    <li><strong>rmdir</strong> — создает новую директорию. Допустим, мы хотим создать папку под новый проект на рабочем
+    <li><strong>mkdir</strong> — создает новую директорию. Допустим, мы хотим создать папку под новый проект на рабочем
         столе. Для этого введем команду: <strong>mkdir ~/Desktop/Timeweb</strong>. При желании можно разместить новую
         папку в промежутке между двумя уже существующими. К примеру: <strong>mkdir -p
-            /home/New_Project/Newest_Project</strong> создаст папку New_Project в домашней директории и станет родителям
-        для существующей папки Newest_Project.
+            /home/New_Project/Newest_Project</strong> создаст папку <strong>New_Project</strong> в домашней директории и станет родителям
+        для существующей папки <strong>Newest_Project</strong>.
     </li>
-    <li><strong>mkdir</strong> — удаляет пустую папку. Акцентируем внимание на слове «пустую». В отличие от rm, rmdir не
+    <li><strong>rmdir</strong> — удаляет пустую папку. Акцентируем внимание на слове «пустую». В отличие от <strong>rm</strong>, <strong>rmdir</strong> не
         трогает другие файлы и субдиректории.
     </li>
     <li><strong>cat</strong> — показывает содержимое документов. Можно скормить этой утилите любой текстовый файл, и она
